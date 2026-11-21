@@ -133,7 +133,8 @@ h3 {
     height: 0.7rem;
     border-radius: 50%;
     background-color: var(--rec);
-    animation: rec-blink 1.6s steps(1, end) 4;
+    animation: rec-blink 1.6s steps(1, end);
+    animation-iteration-count: 4;
 }
 
 @keyframes rec-blink {
@@ -604,6 +605,7 @@ body:has(.lightbox:popover-open) {
 }
 
 .film .ring {
+    --n: 8;
     --w: clamp(14rem, 52vw, 34rem);
     --ratio: 3 / 2;
     --r: calc(var(--w) * 1.06 / 2 / tan(calc(180deg / var(--n))));
